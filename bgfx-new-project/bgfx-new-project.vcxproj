@@ -72,7 +72,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>D:\Library Code\bx\include\compat\msvc;D:\Library Code\bgfx\examples\common;D:\Library Code\bgfx\include;D:\Library Code\bimg\include;D:\Library Code\bx\include;$(IncludePath)</IncludePath>
+    <IncludePath>$(ProjectDir)Library\bx\include\compat\msvc;$(ProjectDir)Library\bgfx\examples\common;$(ProjectDir)Library\bgfx\include;$(ProjectDir)Library\bimg\include;$(ProjectDir)Library\bx\include;$(IncludePath)</IncludePath>
     <LibraryPath>$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -90,11 +90,12 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>D:\Library Code\bgfx\.build\win32_vs2019\bin;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(ProjectDir)Library\bgfx\.build\win32_vs2019\bin;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>bgfxDebug.lib;bimg_decodeDebug.lib;bimgDebug.lib;bxDebug.lib;example-commonDebug.lib;example-glueDebug.lib;DelayImp.lib;psapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
